@@ -8,6 +8,7 @@ class PriceArea extends Component {
     miles: null,
     pickup: false,
     nightCall: false,
+    oxygenTank: false,
     waitingTime: null,
     extraCharges: 0
   };
@@ -22,6 +23,10 @@ class PriceArea extends Component {
 
   nightCallHandler = () => {
     this.setState({ nightCall: !this.state.nightCall });
+  };
+
+  oxygenTankHandler = () => {
+    this.setState({ oxygenTank: !this.state.oxygenTank });
   };
 
   waitingTimeHandler = t => {
@@ -66,11 +71,16 @@ class PriceArea extends Component {
       nPrice = 15 * this.props.way;
     }
 
+    let oPrice = 0;
+    if (this.state.oxygenTank === true) {
+      oPrice = 10 * this.props.way;
+    }
+
     let wPrice = this.state.waitingTime * 12;
 
     let ePrice = this.state.extraCharges * 1;
 
-    let subtotal = bPrice + mPrice + pPrice + nPrice + wPrice + ePrice;
+    let subtotal = bPrice + mPrice + pPrice + nPrice + oPrice + wPrice + ePrice;
 
     let withTax = Math.round(subtotal * 0.095 * 100) / 100;
 
@@ -80,6 +90,7 @@ class PriceArea extends Component {
     // console.log(mPrice);
     // console.log(pPrice);
     // console.log(nPrice);
+    // console.log(oPrice);
     // console.log(wPrice);
     // console.log(ePrice);
     // console.log(subtotal);
@@ -125,6 +136,17 @@ class PriceArea extends Component {
             {this.state.nightCall === false ? 'Include?' : 'Included'}
           </button>
           <p>${nPrice.toFixed(2).toString()}</p>
+        </div>
+
+        <div className={styles.PriceArea}>
+          <p>Oxygen Tank</p>
+          <button
+            onClick={this.oxygenTankHandler}
+            className={this.state.oxygenTank === true ? styles.active : null}
+          >
+            {this.state.oxygenTank === false ? 'Include?' : 'Included'}
+          </button>
+          <p>${oPrice.toFixed(2).toString()}</p>
         </div>
 
         <div className={styles.PriceArea}>
