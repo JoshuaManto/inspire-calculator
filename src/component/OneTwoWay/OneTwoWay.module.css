@@ -1,0 +1,66 @@
+/* .OneTwoWay {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background-color: #8f5c2c;
+}
+
+.OneTwoWay button {
+  color: #8f5c2c;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.OneTwoWay button:hover,
+.OneTwoWay button:active,
+.OneTwoWay button.active {
+  color: #40a4c8;
+}
+
+@media (min-width: 500px) { */
+.OneTwoWay {
+  margin: 0;
+  display: flex;
+  height: 100%;
+  width: auto;
+  align-items: center;
+  /* box-sizing: border-box; */
+  background: #3a285e;
+  background-image: radial-gradient(
+      50% 30% ellipse at center top,
+      #201e40 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  background-attachment: fixed;
+}
+
+.OneTwoWay button {
+  color: #6cacc5;
+  height: 100%;
+  padding: 10px 10px;
+  border: 4px solid transparent;
+  /* border-color: #40a4c8; */
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+  background-color: rgba(42, 50, 113, 0.28);
+  margin: 5px;
+}
+
+.OneTwoWay button:hover,
+.OneTwoWay button:active,
+.PriceArea button.hover {
+  background: #201e40;
+}
+.OneTwoWay button.active {
+  background-color: rgba(42, 50, 113, 0.28);
+  border-bottom: 4px solid #40a4c8;
+  color: #6cacc5;
+}
+/* } */

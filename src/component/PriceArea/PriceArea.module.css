@@ -1,0 +1,82 @@
+/* .PriceArea {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.PriceArea p,
+input {
+  color: #8f5c2c;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.PriceArea button {
+  color: #8f5c2c;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.PriceArea button:hover,
+.PriceArea button:active,
+.PriceArea button.active {
+  color: #40a4c8;
+} */
+
+/* @media (min-width: 500px) { */
+.PriceArea {
+  margin: 0;
+  display: flex;
+  height: 100%;
+  width: auto;
+  align-items: center;
+  /* margin: 10px 0; */
+  box-sizing: border-box;
+  /* display: block; */
+  /* width: 100%; */
+}
+
+.PriceArea p,
+input {
+  color: #6cacc5;
+  height: 100%;
+  padding: 10px 10px;
+  border-bottom: 4px solid transparent;
+  /* color: #8f5c2c; */
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.PriceArea button {
+  color: #6cacc5;
+  height: 100%;
+  padding: 10px 10px;
+  border: 4px solid transparent;
+  /* color: #8f5c2c; */
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+  background-color: rgba(42, 50, 113, 0.28);
+}
+
+.PriceArea button:hover,
+.PriceArea button:active,
+.PriceArea button.hover {
+  background: #201e40;
+}
+.PriceArea button.active {
+  background-color: rgba(42, 50, 113, 0.28);
+  border-bottom: 4px solid #40a4c8;
+  color: #6cacc5;
+}
+/* } */
