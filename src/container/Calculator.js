@@ -116,7 +116,8 @@ class Calculator extends Component {
           <div>
             <p>
               Copyright &copy;
-              <span>{new Date().getFullYear()}</span> Inspire Mobility
+              <span>{new Date().getFullYear()}</span> Inspire Mobility Access.
+              All Rights Reserved.
             </p>
           </div>
         </footer>
