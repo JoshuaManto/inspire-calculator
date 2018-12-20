@@ -5,6 +5,7 @@ import OneTwoWay from '../component/OneTwoWay/OneTwoWay';
 import PriceArea from '../component/PriceArea/PriceArea';
 import styles from './Calculator.module.css';
 // import Aux from '../hoc/Auxiliary/Auxiliary';
+import inspireLogo from '../assets/images/Inspire_Logo3_cropped.png';
 
 class Calculator extends Component {
   state = {
@@ -68,6 +69,12 @@ class Calculator extends Component {
 
     return (
       <div className={styles.Calculator}>
+        <header>
+          <div>
+            <img src={inspireLogo} alt="Inverted Logo colorway" />
+          </div>
+        </header>
+
         {/* ambu, wheel, gurney */}
         <TransportationType
           clicked={this.transportationTypeHandler}
@@ -105,14 +112,14 @@ class Calculator extends Component {
 
         {/* <div /> */}
 
-        {/* <footer className={styles.Calculator}> */}
-        {/* <div> */}
-        {/* <p>
-          Copyright &copy;
-          <span>{new Date().getFullYear()}</span> Inspire Mobility
-        </p> */}
-        {/* </div> */}
-        {/* </footer> */}
+        <footer className={styles.Calculator}>
+          <div>
+            <p>
+              Copyright &copy;
+              <span>{new Date().getFullYear()}</span> Inspire Mobility
+            </p>
+          </div>
+        </footer>
       </div>
     );
   }

@@ -16,7 +16,24 @@
   color: #6cacc5;
 }
 
+.Calculator header {
+  /* padding: 20px; */
+  background-color: #055280;
+  color: white;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.Calculator img {
+  height: 30%;
+  width: 30%;
+}
+
 .Calculator footer {
+  padding: 20px;
+  background-color: #055280;
+  color: white;
   display: block;
   justify-content: center;
   text-align: center;
