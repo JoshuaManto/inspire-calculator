@@ -41,9 +41,13 @@ input {
   /* width: 100%; */
 }
 
+.PriceArea p {
+  font-size: 16px;
+}
+
 .PriceArea p,
 input {
-  color: #6cacc5;
+  color: #055280;
   height: 100%;
   padding: 10px 10px;
   border-bottom: 4px solid transparent;
@@ -56,7 +60,8 @@ input {
 }
 
 .PriceArea button {
-  color: #6cacc5;
+  font-size: 16px;
+  color: #055280;
   height: 100%;
   padding: 10px 10px;
   border: 4px solid transparent;
@@ -73,11 +78,14 @@ input {
 .PriceArea button:hover,
 .PriceArea button:active,
 .PriceArea button.hover {
-  background: #201e40;
+  /* background: #201e40; */
+  background-color: #055280;
+  /* border-bottom: 4px solid white; */
+  color: white;
 }
 .PriceArea button.active {
-  background-color: rgba(42, 50, 113, 0.28);
-  border-bottom: 4px solid #40a4c8;
-  color: #6cacc5;
+  background-color: #055280;
+  /* border-bottom: 4px solid white; */
+  color: white;
 }
 /* } */
