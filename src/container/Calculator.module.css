@@ -25,9 +25,10 @@
   text-align: center;
 }
 
+/* Phone version */
 .Calculator img {
-  height: 30%;
-  width: 30%;
+  height: 50%;
+  width: 50%;
 }
 
 .Calculator footer {
@@ -37,4 +38,12 @@
   display: block;
   justify-content: center;
   text-align: center;
+}
+
+/* Desktop version */
+@media (min-width: 500px) {
+  .Calculator img {
+    height: 30%;
+    width: 30%;
+  }
 }
