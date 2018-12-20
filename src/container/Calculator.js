@@ -104,6 +104,15 @@ class Calculator extends Component {
         </Aux> */}
 
         {/* <div /> */}
+
+        {/* <footer className={styles.Calculator}> */}
+        {/* <div> */}
+        {/* <p>
+          Copyright &copy;
+          <span>{new Date().getFullYear()}</span> Inspire Mobility
+        </p> */}
+        {/* </div> */}
+        {/* </footer> */}
       </div>
     );
   }

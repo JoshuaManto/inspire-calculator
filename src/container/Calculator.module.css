@@ -4,7 +4,7 @@
   justify-content: center;
   width: auto;
   margin: auto;
-
+  height: auto;
   background: #3a285e;
   background-image: radial-gradient(
       50% 30% ellipse at center top,
@@ -14,4 +14,10 @@
     radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
   background-attachment: fixed;
   color: #6cacc5;
+}
+
+.Calculator footer {
+  display: block;
+  justify-content: center;
+  text-align: center;
 }

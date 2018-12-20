@@ -80,11 +80,13 @@ class PriceArea extends Component {
 
     let ePrice = this.state.extraCharges * 1;
 
-    let subtotal = bPrice + mPrice + pPrice + nPrice + oPrice + wPrice + ePrice;
+    let totalPrice =
+      bPrice + mPrice + pPrice + nPrice + oPrice + wPrice + ePrice;
 
-    let withTax = Math.round(subtotal * 0.095 * 100) / 100;
+    // let withTax = Math.round(subtotal * 0.095 * 100) / 100;
 
-    let totalPrice = subtotal + withTax;
+    // let totalPrice = subtotal + withTax;
+    // let totalPrice = subtotal;
 
     // console.log(bPrice);
     // console.log(mPrice);
@@ -173,18 +175,18 @@ class PriceArea extends Component {
         </div>
 
         {/* Subtotal */}
-        <div className={styles.PriceArea}>
+        {/* <div className={styles.PriceArea}>
           <p>Subtotal</p>
           <p />
           <p>${subtotal.toFixed(2)}</p>
-        </div>
+        </div> */}
 
         {/* Tax */}
-        <div className={styles.PriceArea}>
+        {/* <div className={styles.PriceArea}>
           <p>Tax</p>
           <p>9.5%</p>
           <p>${withTax.toFixed(2)}</p>
-        </div>
+        </div> */}
 
         {/* Total */}
         <div className={styles.PriceArea}>
