@@ -162,7 +162,7 @@ class PriceArea extends Component {
         </div>
 
         <div className={styles.PriceArea}>
-          <p>Wheel Chair Use</p>
+          <p>Wheelchair Use</p>
           <button
             onClick={this.wheelChairHandler}
             className={this.state.wheelChair === true ? styles.active : null}
