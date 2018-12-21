@@ -9,6 +9,7 @@ class PriceArea extends Component {
     pickup: false,
     nightCall: false,
     oxygenTank: false,
+    wheelChair: false,
     waitingTime: null,
     extraCharges: 0
   };
@@ -36,6 +37,10 @@ class PriceArea extends Component {
 
   extraChargesHandler = c => {
     this.setState({ extraCharges: c.target.value });
+  };
+
+  wheelChairHandler = () => {
+    this.setState({ wheelChair: !this.state.wheelChair });
   };
 
   render() {
@@ -76,12 +81,17 @@ class PriceArea extends Component {
       oPrice = 10 * this.props.way;
     }
 
+    let cPrice = 0;
+    if (this.state.wheelChair === true) {
+      cPrice = 15 * this.props.way;
+    }
+
     let wPrice = this.state.waitingTime * 12;
 
     let ePrice = this.state.extraCharges * 1;
 
     let totalPrice =
-      bPrice + mPrice + pPrice + nPrice + oPrice + wPrice + ePrice;
+      bPrice + mPrice + pPrice + nPrice + oPrice + cPrice + wPrice + ePrice;
 
     // let withTax = Math.round(subtotal * 0.095 * 100) / 100;
 
@@ -149,6 +159,17 @@ class PriceArea extends Component {
             {this.state.oxygenTank === false ? 'Include?' : 'Included'}
           </button>
           <p>${oPrice.toFixed(2).toString()}</p>
+        </div>
+
+        <div className={styles.PriceArea}>
+          <p>Wheel Chair Use</p>
+          <button
+            onClick={this.wheelChairHandler}
+            className={this.state.wheelChair === true ? styles.active : null}
+          >
+            {this.state.wheelChair === false ? 'Include?' : 'Included'}
+          </button>
+          <p>${cPrice.toFixed(2).toString()}</p>
         </div>
 
         <div className={styles.PriceArea}>
